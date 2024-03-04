@@ -1,24 +1,24 @@
-- name: Pricing
+- name: ПРИДБАТИ
   link: /pricing/
   new_window: false
-  highlight: false
-- name: Blog
-  link: /blog/
-  new_window: false
-  highlight: false
-- name: About
+  highlight: true
+# - name: Blog
+#   link: /blog/
+#   new_window: false
+#   highlight: false
+- name: Про нас
   link: /about/
   new_window: false
   highlight: false
-- name: Contact
+- name: Контакти
   link: /contact/
   new_window: false
   highlight: false
-- name: Login
-  link: /
-  new_window: true
-  highlight: false
-- name: Sign Up
-  link: /
-  new_window: true
-  highlight: true
+# - name: Login
+#   link: /
+#   new_window: true
+#   highlight: false
+# - name: Sign Up
+#   link: /
+#   new_window: true
+#   highlight: true
