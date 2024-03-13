@@ -4,5 +4,5 @@
 			<a href="{{ site.baseurl }}/category/{{ category | slugify }}/">{{ category | capitalize }}</a>
 		</span>
 	{% endfor %} -->
-	<a href="{% include relative-src.html src=post.url %}"><img src="{{ include.post.images }}" alt="{{ include.post.title }}"></a>
+	<a href="{% include relative-src.html src=post.url %}"><img src="{{ site.baseurl }}{{ include.post.images }}" alt="{{ include.post.title }}"></a>
 </p>

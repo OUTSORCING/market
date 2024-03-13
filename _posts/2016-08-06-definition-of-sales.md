@@ -1,7 +1,7 @@
 ---
 date: 2020-08-06
 title: Definition of sales
-images: market/images/dashboard.png
+images: images/dashboard.png
 price: 2500
 ---
 
