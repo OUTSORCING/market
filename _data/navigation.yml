@@ -1,5 +1,5 @@
-- name: ПРИДБАТИ
-  link: /pricing/
+- name: Придбати
+  link: /product/
   new_window: false
   highlight: true
 # - name: Blog
