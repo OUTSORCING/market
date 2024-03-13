@@ -2,7 +2,7 @@
 date: 2020-08-02
 title: Sales effectiveness
 description: Deer t-shirt
-images: /images/dashboard.png
+images: market/images/dashboard.png
 price: '1300'
 styles:
   - name: Black
