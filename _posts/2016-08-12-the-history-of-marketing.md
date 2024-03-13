@@ -1,7 +1,7 @@
 ---
 date: 2020-08-12
 title: The history of marketing
-images: market/images/dashboard.png
+images: images/dashboard.png
 price: 999
 descriptions: Короткий опис 
 comments: true
