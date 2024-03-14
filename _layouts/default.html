@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		
 
 		{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
 			<script>
@@ -54,11 +55,14 @@
 
 		<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
+
 		<script>
 			document.getElementById("open-nav").onclick = function () {
 				document.body.classList.toggle("nav-open");
 				return false;
 			};
 		</script>
+		<script id="dsq-count-scr" src="//osdmarket.disqus.com/count.js" async></script>
+
 	</body>
 </html>

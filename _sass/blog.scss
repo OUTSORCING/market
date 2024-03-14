@@ -1,147 +1,123 @@
-.blog-posts {
-	list-style: none;
-	padding: 0;
+.products-container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	    /* Наприклад: */
-		background-color: #fff;
-		border-radius: 10px;
-		transition: box-shadow 0.3s ease;
+	gap: 30px;
+	padding: 30px;
+	justify-content: space-between; /* Забезпечує рівні відступи між елементами */
+  }
   
-	li {
-	  width: calc(33.33% - 60px);
-	  margin: 20px 0;
-	  padding: 15px;
+  .product-card {
+	flex-basis: calc(33.33% - 40px); /* Вираховуємо ширину з урахуванням відступів */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between; /* Додаємо простір між контентом і кнопкою */
+	height: 100%; /* Вказуємо картці займати повну висоту */
+	align-items: stretch;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 12px;
+	overflow: hidden;
+	background-color: #fff;
+  }
   
-	  &:nth-child(3n + 1) {
-		margin-left: 0;
-	  }
+  .product-card * {
+	transition: all 0.2s ease-in-out;
+  }
   
-	  &:nth-child(3n) {
-		margin-right: 0;
-	  }
-	}
-}
-
-.blog-posts li:hover {
-    /* Змінюємо тінь при наведенні */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Приклад */
-}
-
-.blog-post {
-	.author {
-		padding: 30px 0 0 0;
-		border: 1px solid #eee;
-		margin: 30px 0;
-		font-size: .8em;
-
-		.square-image {
-			width: 125px;
-			height: 125px;
-			margin-top: 0;
-		}
-		.blurb {
-			text-align: center;
-		}
-	}
-
-	h3 {
-		margin: 0;
-		a {
-			color: #000;
-			text-decoration: none;
-			font-weight: normal;
-			font-size: 1.3em;
-		}
-	}
-
-	h2 {
-		text-align: left;
-	}
-
-	.blog-navigation {
-		font-size: 14px;
-		display: block;
-		width: auto;
-		overflow: hidden;
-		a {
-			display: block;
-			width: 50%;
-			float: left;
-			margin: 1em 0;
-		}
-
-		.next {
-			text-align: right;
-		}
-	}
-
-	.post-details {
-		border-bottom: 1px solid #eee;
-		font-size: .9em;
-
-		.blog-filter {
-			display: inline-block;
-			text-align: left;
-
-			a {
-				position: relative;
-				top: -5px;
-			}
-		}
-
-		a {
-			text-decoration: none;
-		}
-
-		.post-date {
-			float: right;
-		}
-
-		&:after {
-			content: "";
-			display: table;
-			clear: both;
-		}
-	}
-
-	.post-content {
-		.button {
-			margin: 30px 0 0 0;
-		}
-	}
-}
-
-.pagination {
+  .product-card__image img {
+	width: 100%;
+	display: block;
+  }
+  
+  .product-card__body {
+	padding: 20px;
+  }
+  
+  .product-card__title {
+	margin: 0 0 10px;
+	font-weight: bold;
+	color: #333;
+  }
+  
+  .product-card__desc {
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 10px;
+  }
+  
+  .product-card__stock {
+	font-size: 16px;
+	color: #68bb79;
+	margin-bottom: 10px;
+  }
+  
+  .product-card__price {
+	display: flex;
+	align-items: baseline;
+	margin-bottom: 10px;
+  }
+  
+  .price__current {
+	font-size: 20px;
+	color: #333;
+	font-weight: bold;
+  }
+  
+  .price__old {
+	font-size: 16px;
+	text-decoration: line-through;
+	margin-left: 10px;
+	color: #999;
+  }
+  
+  .product-card__labels {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 20px;
+  }
+  
+  .label {
+	font-size: 14px;
+	padding: 5px 10px;
+	border-radius: 10px;
+	color: #fff;
+  }
+  
+  .label_hit {
+	background: #68bb79;
+  }
+  
+  .label_sale {
+	background: #e86b6b;
+  }
+  
+  .product-card__btn {
 	text-align: center;
-}
-
-.blog-filter {
-	text-align: center;
-	a {
-		background: #eee;
-    padding: 3px 5px;
-    font-size: .8em;
-    border-radius: 5px;
-    color: #888;
-		transition: .2s ease-in-out;
-
-		&:hover {
-			color: #555;
-			text-decoration: none;
-		}
+	padding: 10px;
+  }
+  
+  .btn_product {
+	padding: 10px 20px;
+	border: none;
+	background-color: #68bb79;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s;
+  }
+  
+  .btn_product:hover {
+	background-color: #5aa769;
+  }
+  
+  /* Медіа-запити для адаптивності */
+  @media (max-width: 1024px) {
+	.product-card {
+	  flex-basis: calc(50% - 40px); /* Два продукти в ряд */
 	}
-}
-
-.blog-filter.cross a {
-	padding-right: 8px;
-
-	&:after {
-		content: "x";
-		font-size: .5em;
-		position: relative;
-		bottom: 4px;
-		right: -3px;
+  }
+  
+  @media (max-width: 768px) {
+	.product-card {
+	  flex-basis: calc(100% - 40px); /* Один продукт на ряд */
 	}
-}
+  }
+  

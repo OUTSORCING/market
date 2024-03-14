@@ -1,17 +1,81 @@
-{% for post in include.posts %}
-	<li class="blog-post"><a href="{{ post.url }}">
-		{% include post-title.html post=post %}
-		<h3 class="entry-title item_name" itemprop="name"><a href="{% include relative-src.html src=post.url %}">{{ post.title }}</a></h3>
-		<!-- <div class="post-content">
-			 {{ post.excerpt  | truncatewords: 5}} 
-			<div class="button"><a href="{% include relative-src.html src=post.url %}">Докладніше</a></div>
-		</div> -->
-		<div class="post-content">
-		<span><i class="fa fa-comments" style="color:#4182e4"></i></span> <a href="{% include relative-src.html src=post.url %}#disqus_thread">0 Коментарів</a>
-	</div>
-		<p class="item_price">{{ post.price }} ₴</p>
-		<div class="button"><a href="{% include relative-src.html src=post.url %}">Докладніше</a></div>
-		<br>
-	</li>
-{% endfor %}
-<script id="dsq-count-scr" src="//osdmarket.disqus.com/count.js" async></script>
+<div class="products-container">
+	{% for post in include.posts %}
+	  <div class="product-card">
+		<a class="product-card__image" href="{{ post.url }}">
+		  <!-- Припустимо, що у вас є зображення для поста -->
+		  <img src="{{ site.baseurl }}/{{ post.images }}" alt="{{ page.title }}">
+		<div class="product-card__body">
+		  <a class="product-card__title" href="{{ post.url }}">{{ post.title }}</a>
+		  <div class="product-card__stock"><a href="{{ post.url }}#disqus_thread">  </a></div>
+		  <div class="product-card__desc">{{ post.descriptions }}</div>
+		  <div class="product-card__price price">
+			<span class="price__current">{{ post.price }} ₴</span>
+			<!-- Якщо є стара ціна, можна додати так -->
+			<!-- <span class="price__old">200 ₴</span> -->
+		  </div>
+		  <button class="btn btn_product" type="button">Придбати</button>
+		</div>
+	    </a>
+	  </div>
+	{% endfor %}
+  </div>
+
+<style>
+	.btn {
+   position: relative;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: none;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   text-decoration: none;
+   white-space: nowrap;
+   user-select: none;
+   color: var(--btn-start-color);
+   background: var(--btn-start-background);
+   border: var(--btn-start-border);
+   padding: var(--btn-start-padding);
+   height: var(--btn-height);
+   border-radius: 9999px;
+   line-height: 18px;
+   transition-property: color, background-color, border-color, opacity,
+      box-shadow;
+   transition-duration: var(--duration-normal);
+   transition-timing-function: ease-in-out;
+   &:focus {
+      outline: none;
+   }
+   &:hover {
+      color: var(--btn-hover-color);
+      border: var(--btn-hover-border);
+      padding: var(--btn-hover-padding);
+      background: var(--btn-hover-background);
+   }
+   &:active,
+   &:focus {
+      color: var(--btn-focus-color);
+      border: var(--btn-focus-border);
+      padding: var(--btn-focus-padding);
+      background: var(--btn-focus-background);
+   }
+}
+
+.btn_product {
+   --btn-start-color: #b7b7b7;
+   --btn-hover-color: #ffffff;
+   --btn-focus-color: #ffffff;
+   --btn-start-background: transparent;
+   --btn-hover-background: linear-gradient(135deg, #29803b 0%, #68bb79 100%);
+   --btn-focus-background: #29803b;
+   --btn-start-border: 1px solid #b7b7b7;
+   --btn-hover-border: 0;
+   --btn-focus-border: 0;
+   --btn-start-padding: 0 24px;
+   --btn-hover-padding: 0 25px;
+   --btn-focus-padding: 0 25px;
+   height: 48px;
+}
+
+</style>
