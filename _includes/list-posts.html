@@ -1,7 +1,7 @@
 <div class="products-container">
 	{% for post in include.posts %}
 	  <div class="product-card">
-		<a class="product-card__image" href="{{ post.url }}">
+		<a class="product-card__image" href="{% include relative-src.html src=post.url %}">
 		  <!-- Припустимо, що у вас є зображення для поста -->
 		  <img src="{{ site.baseurl }}/{{ post.images }}" alt="{{ page.title }}">
 		<div class="product-card__body">
