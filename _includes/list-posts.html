@@ -6,10 +6,10 @@
 			 {{ post.excerpt  | truncatewords: 5}} 
 			<div class="button"><a href="{% include relative-src.html src=post.url %}">Докладніше</a></div>
 		</div> -->
-		<span><i class="fa fa-comments" style="color:#4182e4"></i></span> <a href="{{ post.url }}#disqus_thread"></a>
+		<span><i class="fa fa-comments" style="color:#4182e4"></i></span> <a href="{{ post.url }}#disqus_thread">0 Коментарів</a>
 		<p class="item_price">{{ post.price }} ₴</p>
 		<div class="button"><a href="{% include relative-src.html src=post.url %}">Докладніше</a></div>
 		<br>
 	</li>
 {% endfor %}
-<script src="/js/count.js"></script> 
+<script id="dsq-count-scr" src="//osdmarket.disqus.com/count.js" async></script>

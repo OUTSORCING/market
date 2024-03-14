@@ -6,6 +6,7 @@ images: images/dashboard.png
 price: '1300'
 styles:
   - name: Black
+comments: true
 ---
 
   <div class="product-specifications">
