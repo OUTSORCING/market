@@ -6,8 +6,10 @@
 			 {{ post.excerpt  | truncatewords: 5}} 
 			<div class="button"><a href="{% include relative-src.html src=post.url %}">Докладніше</a></div>
 		</div> -->
+		<span><i class="fa fa-comments" style="color:#4182e4"></i></span> <a href="{{ post.url }}#disqus_thread"></a>
 		<p class="item_price">{{ post.price }} ₴</p>
 		<div class="button"><a href="{% include relative-src.html src=post.url %}">Докладніше</a></div>
 		<br>
 	</li>
 {% endfor %}
+<script src="/js/count.js"></script> 
